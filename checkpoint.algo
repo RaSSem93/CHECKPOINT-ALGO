@@ -1,0 +1,26 @@
+ALGORITHM Chaine
+VAR
+    ch:=STRING
+    i:=INTEGER=0
+    nombredemot:=INTEGER=0
+    nombredecaractere :=INTEGER=0
+    nombredevoyelle :=INTEGER=0
+    voyelle := ["A","a","U","u","O","o","E","e","I","i","Y","y"]
+BEGIN
+
+    FOR i FROM 0 TO length ch STEP 1  DO
+        nombredecaractere++
+        IF (ch[i]:=" " OR ch[i]=".") THEN
+            nombredemot:=nombredemot + 1 
+        END_IF
+
+        IF (ch[i]:= voyelle) THEN
+            nombredevoyelle= nombredevoyelle(i)
+        END_IF
+
+    END_FOR
+    Write ("le nombre de caractere est", nombredecaractere)
+    Write ("le nombre de mot est", nombredemot)
+    Write ("le nombre de voyelle est ", nombredevoyelle)
+
+END
